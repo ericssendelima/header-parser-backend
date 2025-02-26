@@ -4,6 +4,8 @@ import path from "path";
 
 const __dirname = path.resolve();
 const app = express();
+// Configure para confiar nos cabeçalhos de proxy
+app.set('trust proxy', true);
 
 app.use(cors({ optionsSuccessStatus: 200 })); // some legacy browsers choke on 204
 
